@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bengali Digit Recognition - Result</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 500px;
+        box-shadow: 0px 2px 5px #ccc;
+      }
+      p {
+        text-align: center;
+        font-size: 24px;
+        margin-top: 20px;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      button:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bengali Digit Recognition - Result</h1>
+    <img src="{{ url_for('static', filename='uploads/' + image_file.filename) }}" alt="Input image">
+    <p>The bengali number is : {{ predicted_class }}</p>
+    <button onclick="window.location.href='{{ url_for('index') }}'">Predict another digit</button>
+  </body>
+</html>

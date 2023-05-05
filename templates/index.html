@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bengali Digit Recognition</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+      form {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+      }
+      input[type=file] {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0px 2px 5px #ccc;
+      }
+      button[type=submit] {
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      button[type=submit]:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bengali Digit Recognition</h1>
+    <form action="{{ url_for('handle_prediction') }}" method="post" enctype="multipart/form-data">
+      <input type="file" name="image">
+      <button type="submit">Predict</button>
+    </form>
+  </body>
+</html>
